@@ -1,3 +1,4 @@
+// single product details in homescreen 
 import React from 'react'
 import {Link} from 'react-router-dom'
 import { Card } from 'react-bootstrap'
