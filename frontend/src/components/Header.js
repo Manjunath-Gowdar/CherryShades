@@ -16,12 +16,12 @@ const Header = () => {
               {/* the below i tag is from fontawesome */}
               <LinkContainer to='/cart'>
                 <Nav.Link>
-                  <i class='fas fa-shopping-cart'></i>Cart
+                  <i className='fas fa-shopping-cart'></i>Cart
                 </Nav.Link>
               </LinkContainer>
               <LinkContainer to='/login'>
                 <Nav.Link href='/login'>
-                  <i class='fas fa-user'></i>Sign In
+                  <i className='fas fa-user'></i>Sign In
                 </Nav.Link>
               </LinkContainer>
             </Nav>
