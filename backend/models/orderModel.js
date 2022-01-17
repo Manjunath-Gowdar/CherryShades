@@ -1,6 +1,6 @@
 import mongoose from 'mongoose'
 
-const userSchema = mongoose.Schema(
+const orderSchema = mongoose.Schema(
   {
     name: {
       type: mongoose.Schema.Types.ObjectId,
@@ -21,7 +21,7 @@ const userSchema = mongoose.Schema(
       },
     ],
     shippingAddress: {
-      address: { type: String, required: ture },
+      address: { type: String, required: true },
       city: { type: String, required: true },
       postalCode: { type: String, required: true },
       country: { type: String, required: true },
@@ -32,7 +32,7 @@ const userSchema = mongoose.Schema(
     },
     paymentResult: {
       id: { type: String },
-      status: { type: string },
+      status: { type: String },
       update_time: { type: String },
       email_address: { type: String },
     },
