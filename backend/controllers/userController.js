@@ -39,7 +39,7 @@ const registerUser = asyncHandler(async (req, res) => {
   })
   
   if(user){
-    res.status(401).json({
+    res.status(201).json({
       _id: user._id,
       name: user.name,
       email: user.email,
@@ -53,7 +53,7 @@ const registerUser = asyncHandler(async (req, res) => {
 })
 
 //@desc   GET user Profile
-//@route  GET /api/user/profile
+//@route  GET /api/users/profile
 //@access Private
 const getUserProfile = asyncHandler(async (req, res) => {
   const user = await User.findById(req.user._id)
