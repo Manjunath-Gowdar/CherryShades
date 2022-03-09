@@ -6,7 +6,11 @@ import {
   productListReducer,
 } from './reducers/productReducers'
 import { cartReducer } from './reducers/cartReducers'
-import { userLoginReducers } from './reducers/userReducers'
+import {
+  userDetailsReducer,
+  userLoginReducers,
+  userUpdateProfileReducer,
+} from './reducers/userReducers'
 import { userRegisterReducers } from './reducers/userReducers'
 
 // to combine all the middle wares here
@@ -15,7 +19,9 @@ const reducers = combineReducers({
   productDetails: productDetailsReducer,
   cart: cartReducer,
   userLogin: userLoginReducers,
-  userRegister:userRegisterReducers
+  userRegister: userRegisterReducers,
+  userDetails: userDetailsReducer,
+  userUpdateProfile: userUpdateProfileReducer,
 })
 
 // accessing cartitem from local storage
