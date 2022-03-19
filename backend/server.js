@@ -3,9 +3,9 @@ import dotenv from 'dotenv'
 import connectDB from './config/db.js'
 import colors from 'colors'
 import productRoute from './routes/productRoutes.js'
-import {notFound,errorHandler} from './middleware/errorMiddleware.js'
+import { notFound, errorHandler } from './middleware/errorMiddleware.js'
 import userRoute from './routes/userRoutes.js'
-
+import orderRoutes from './routes/orderRoutes.js'
 
 dotenv.config()
 
@@ -19,7 +19,9 @@ app.get('/', (req, res) => {
 })
 
 app.use('/api/products', productRoute)
-app.use('/api/users',userRoute)
+app.use('/api/users', userRoute)
+app.use('/api/orders', orderRoutes)
+
 // error handling middleware
 app.use(notFound)
 app.use(errorHandler)
