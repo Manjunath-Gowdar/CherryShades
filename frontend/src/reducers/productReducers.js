@@ -34,7 +34,9 @@ export const productDetailsReducer = (
 ) => {
   switch (action.type) {
     case PRODUCT_DETAILS_REQUEST:
-      return { loading: true, product:{reviews:[]} }
+      // ProductEditScreen was giving infinite loop in website so i changed the below code from 
+      // "return { loading: true, product:{reviews:[]} }" to
+      return {loading:true, ...state}
     case PRODUCT_DETAILS_SUCCESS:
       return { loading: false, product: action.payload }
     case PRODUCT_DETAILS_FAIL:
