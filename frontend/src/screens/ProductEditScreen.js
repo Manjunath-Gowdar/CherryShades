@@ -73,8 +73,8 @@ const ProductEditScreen = ({ match, history }) => {
       </Link>
       <FormContainer>
         <h1>Edit Product</h1>
-        update loader
-        {/* {loadingUpdate && <Loader />} */}
+        {/* update loader */}
+        {loadingUpdate && <Loader />}
         {errorUpdate && <Message variant='danger'>{errorUpdate}</Message>}
         {/* product details loader  */}
         {loading ? (
