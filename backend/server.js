@@ -1,3 +1,4 @@
+import path from 'path'
 import express from 'express'
 import dotenv from 'dotenv'
 import connectDB from './config/db.js'
@@ -6,6 +7,7 @@ import productRoute from './routes/productRoutes.js'
 import { notFound, errorHandler } from './middleware/errorMiddleware.js'
 import userRoute from './routes/userRoutes.js'
 import orderRoutes from './routes/orderRoutes.js'
+import uploadRoutes from './routes/uploadRoutes.js'
 
 dotenv.config()
 
@@ -26,6 +28,11 @@ app.get('/api/config/paypal',(req,res)=>{
 app.use('/api/products', productRoute)
 app.use('/api/users', userRoute)
 app.use('/api/orders', orderRoutes)
+app.use('/api/upload', uploadRoutes)
+
+// uploading image 
+const __dirname = path.resolve()
+app.use('/uploads', express.static(path.join(__dirname, '/uploads')))
 
 // error handling middleware
 app.use(notFound)
