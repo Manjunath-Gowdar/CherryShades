@@ -50,10 +50,15 @@ const CartScreen = ({ match, location, history }) => {
                     <Form.Control
                       as='select'
                       value={item.qty}
-                      onChange={(e) =>
+                      onChange={(e) =>{
+
                         dispatch(
                           addToCart(item.product, Number(e.target.value))
-                        )
+                          )
+                          // Fixed - qty change update to store even after reload qty remains same 
+                          history.push('/cart')
+                        }
+
                       }>
                       {[...Array(item.countInStock).keys()].map((x) => (
                         <option key={x + 1} value={x + 1}>
