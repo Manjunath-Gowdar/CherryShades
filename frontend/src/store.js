@@ -16,7 +16,7 @@ import {
   userLoginReducers,
   userUpdateProfileReducer,
   userUpdateReducer,
-  userRegisterReducer
+  userRegisterReducer,
 } from './reducers/userReducers'
 import {
   orderCreateReducer,
@@ -24,6 +24,7 @@ import {
   orderPayReducer,
   orderListMyReducer,
   orderListReducer,
+  orderDeliverReducer,
 } from './reducers/orderReducers'
 
 // to combine all the middle wares here
@@ -46,6 +47,7 @@ const reducers = combineReducers({
   orderPay: orderPayReducer,
   orderListMy: orderListMyReducer,
   orderList: orderListReducer,
+  orderDeliver: orderDeliverReducer,
 })
 
 // accessing cartitem from local storage
