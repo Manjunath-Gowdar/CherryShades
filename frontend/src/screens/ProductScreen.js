@@ -186,7 +186,7 @@ const ProductScreen = ({ history, match }) => {
                             setComment(e.target.value)
                           }></Form.Control>
                       </Form.Group>
-                      <Button type='submit' variant='primary'>
+                      <Button type='submit' style={{'margin-top':'10px'}} variant='primary'>
                         Submit
                       </Button>
                     </Form>

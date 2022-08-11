@@ -29,9 +29,11 @@ const PaymentScreen = ({ history }) => {
       <h1>Payment Method</h1>
       <Form onSubmit={submitHandler}>
         <Form.Group controlId='address'>
-          <Form.Label as='legend'>Select Method</Form.Label>
+          <Form.Label as='legend'>Default Payment Method</Form.Label>
+          <h6>Click 'Continue' to use <strong>Fake Money</strong></h6>
           <Col>
             <Form.Check
+            checked="true"
               type='radio'
               label='PayPal or Credit Card'
               id='PayPal'
@@ -41,7 +43,7 @@ const PaymentScreen = ({ history }) => {
           </Col>
         </Form.Group>
 
-        <Button type='submit' variant='primary'>
+        <Button type='submit' style={{'margin-top':'10px'}} variant='primary'>
           Continue
         </Button>
       </Form>

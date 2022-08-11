@@ -45,21 +45,18 @@ const CartScreen = ({ match, location, history }) => {
                   <Col md={3}>
                     <Link to={`/product/${item.product}`}>{item.name}</Link>
                   </Col>
-                  <Col md={2}>${item.price}</Col>
+                  <Col md={2}>₹{item.price}</Col>
                   <Col md={2}>
                     <Form.Control
                       as='select'
                       value={item.qty}
-                      onChange={(e) =>{
-
+                      onChange={(e) => {
                         dispatch(
                           addToCart(item.product, Number(e.target.value))
-                          )
-                          // Fixed - qty change update to store even after reload qty remains same 
-                          history.push('/cart')
-                        }
-
-                      }>
+                        )
+                        // Fixed - qty change update to store even after reload qty remains same
+                        history.push('/cart')
+                      }}>
                       {[...Array(item.countInStock).keys()].map((x) => (
                         <option key={x + 1} value={x + 1}>
                           {x + 1}
@@ -89,7 +86,7 @@ const CartScreen = ({ match, location, history }) => {
                 Subtotal({cartItems.reduce((acc, item) => acc + item.qty, 0)})
                 items
               </h2>
-              <span style={{paddingRight:'5px'}}>₹</span>
+              <span style={{ paddingRight: '5px' }}>₹</span>
               {cartItems
                 .reduce((acc, item) => acc + item.qty * item.price, 0)
                 .toFixed(2)}

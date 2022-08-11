@@ -87,7 +87,7 @@ const OrderScreen = ({ match }) => {
     <Message variant='danger'>{error}</Message>
   ) : (
     <>
-      <h1>Order {order._id}</h1>
+      <h1>Order Id - {order._id}</h1>
       <Row>
         <Col md={8}>
           <ListGroup variant='flush'>
@@ -197,6 +197,11 @@ const OrderScreen = ({ match }) => {
                   <Col>Total</Col>
                   <Col>₹{order.totalPrice}</Col>
                 </Row>
+                <hr/>
+                <p style={{margin:'0px'}}>Click on 'PayPal' to use <strong>Fake Money</strong></p>
+                <p style={{margin:'0px'}}>In paypal use the below credentials</p>
+                <p style={{margin:'0px'}}>Email ID: <strong> sb-807lz15885080@personal.example.com </strong>  </p>
+                <p style={{margin:'0px'}}>Password - <strong>5E?rxFL^</strong></p>
               </ListGroup.Item>
               {!order.isPaid && (
                 <ListGroup.Item>
