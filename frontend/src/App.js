@@ -18,14 +18,13 @@ import UserEditScreen from './screens/UserEditScreen'
 import ProductListScreen from './screens/ProductListScreen'
 import ProductEditScreen from './screens/ProductEditScreen'
 import OrderListScreen from './screens/OrderListScreen'
-import NithyaScreen from './screens/NithyaScreen'
 
 const App = () => {
   return (
     <>
       <Router>
         <Header />
-        <main className='py-3' >
+        <main className='py-3'>
           <Container>
             <Route path='/shipping' component={ShippingScreen} />
             <Route path='/order/:id' component={OrderScreen} />
@@ -34,7 +33,6 @@ const App = () => {
             <Route path='/register' component={RegisterScreen} />
             <Route path='/login' component={LoginScreen} />
             <Route path='/profile' component={ProfileScreen} />
-            <Route path='/Nithya' component={NithyaScreen} />
             <Route path='/product/:id' component={ProductScreen} />
             <Route path='/cart/:id?' component={CartScreen} />
             <Route path='/admin/userlist' component={UserListScreen} />
