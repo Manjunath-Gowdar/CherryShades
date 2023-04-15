@@ -1,0 +1,7 @@
+I deployed this web app to render, 
+follow steps
+ -@render.com choose web sevices, choose github deploy
+ -@Build command add 'npm install --prefix frontend && npm run build --prefix frontend"
+ -@Start Command add "node backend/server.js"
+ -@Advanced add ur .env credentials apart from "NODE_ENV = development" (dont add this)
+
