@@ -1,7 +1,13 @@
-I deployed this web app to render, 
+I deployed this web app to render.com, 
 follow steps
  -@render.com choose web sevices, choose github deploy
  -@Build command add 'npm install --prefix frontend && npm run build --prefix frontend"
  -@Start Command add "node backend/server.js"
  -@Advanced add ur .env credentials apart from "NODE_ENV = development" (dont add this)
 
+If deployed to cyclic.sh website
+follow steps
+ -@.env maked 'NODE_ENV = production'
+ -@your have to create build folder for frontend and then push it to github
+ -@cyclic.sh website choose 'Link your own' and select your github repo(you have to connect to github)
+ 
