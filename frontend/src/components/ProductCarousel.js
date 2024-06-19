@@ -23,12 +23,14 @@ const ProductCarousel = () => {
   ) : (
     <Carousel pause='hover' className='bg-dark'>
       {products.map((product) => (
-        <Carousel.Item style={{ paddingLeft: '40px' }} key={product._id}>
-          <Link to={`/product/${product._id}`}>
+        <Carousel.Item key={product._id} >
+          <Link
+            to={`/product/${product._id}`}
+            className='d-flex justify-content-center'>
             <Image src={product.image} alt={product.name} fluid />
-            <Carousel.Caption className='carousel-caption'>
-              <h2>
-                {product.name} (₹{product.price})
+            <Carousel.Caption className='carousel-caption '>
+              <h2 style={{margin:'-0.6rem 1rem'}}>
+                {product.name} 
               </h2>
             </Carousel.Caption>
           </Link>
@@ -39,3 +41,5 @@ const ProductCarousel = () => {
 }
 
 export default ProductCarousel
+
+// style={{ margin:'0' }}
