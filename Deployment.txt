@@ -11,3 +11,8 @@ follow steps
  -@your have to create build folder for frontend and then push it to github
  -@cyclic.sh website choose 'Link your own' and select your github repo(you have to connect to github)
  
+note
+cyclic.sh has stoped all its service from may 2024, to i have shifted all mern stack app to render.com,
+  ####@root @ package.json, @ scripts add ' "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend" ', so that render.com can install dependencies in frontend folder and also in backend folder, and then to start the build folder to access file/folder in production.
+  ####@Start Command add "node backend/server.js" (if required in render.com)
+  ####@render.com add ur .env credentials apart from "NODE_ENV = development" (dont add this)
